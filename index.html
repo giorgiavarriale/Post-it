@@ -1,111 +1,196 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Post-it — Dalla Community per la Community</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-it</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <style>
+        /* Font e colore globale */
         body {
-            margin: 0;
-            font-family: "Arial", sans-serif;
-            background: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .w3-bar .w3-bar-item {
+            font-weight: 600;
+        }
+
+        /* Header */
+        .motto {
+            font-size: 1.4rem;
+            margin-top: 10px;
+            display: inline-block;
+            background: rgba(0,0,0,0.6);
+            padding: 6px 14px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        /* Sezioni */
+        .w3-container {
+            padding: 40px 20px;
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
             color: #333;
         }
 
-        header {
-            background: linear-gradient(135deg, #ff9800, #ffb74d);
-            padding: 60px 30px;
-            text-align: center;
-            color: white;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.4rem;
-            font-weight: bold;
-        }
-
-        header p {
-            margin-top: 10px;
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .hero-img {
-            width: 100%;
-            max-width: 600px;
-            margin: 40px auto;
-            display: block;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .section h2 {
-            color: #ff9800;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-        }
-
-        .section p {
-            line-height: 1.6;
-            font-size: 1.05rem;
-        }
-
-        .cta {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .cta a {
-            background: #ff9800;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
+        p {
             font-size: 1.1rem;
-            transition: background 0.3s;
+            margin-bottom: 16px;
+            color: #555;
         }
 
-        .cta a:hover {
-            background: #fb8c00;
+        p.w3-opacity, #sedi p {
+            font-size: 1rem;
+            color: #666;
         }
+
+        /* Immagini sedi */
+        .sede-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* Box uniformi per sedi e team */
+        .w3-col {
+            background: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        /* Team */
+        #team h3, #team p {
+            text-align: left;
+        }
+
+        /* Spaziature interne righe */
+        .w3-row-padding > .w3-col {
+            margin-bottom: 30px;
+        }
+
     </style>
 </head>
-
 <body>
-<header>
-    <h1>Post-it</h1>
-    <p>Dalla community per la community</p>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="#home" class="w3-bar-item w3-button">Home</a>
+        <div class="w3-right w3-hide-small">
+            <a href="#sedi" class="w3-bar-item w3-button">Sedi</a>
+            <a href="#about" class="w3-bar-item w3-button">About</a>
+            <a href="#team" class="w3-bar-item w3-button">Team</a>
+        </div>
+    </div>
+</div>
+
+<!-- Header con immagine -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+    <img class="w3-image" src="/Images/index.png" alt="Studenti che studiano" width="1500" height="800">
+    <div class="w3-display-middle w3-center">
+        <h1 class="w3-xxxlarge w3-text-white">
+            <span class="w3-padding w3-black w3-opacity-min"><b>Post-it</b></span>
+        </h1>
+        <p class="w3-text-white motto">Dalla community per la community</p>
+    </div>
 </header>
 
-<img src="(inserisci-immagine-di-studenti-o-postit)" alt="Studenti che studiano con post-it" class="hero-img" />
+<!-- Contenuto Pagina -->
+<div class="w3-content w3-padding" style="max-width:1564px">
 
-<section class="section">
-    <h2>Cos'è Post-it?</h2>
-    <p>
-        Post-it è una web app pensata per migliorare la vita universitaria degli studenti dell'Orientale.<br>
-        Ogni giorno centinaia di studenti cercano aule studio, biblioteche, prese disponibili e spazi in cui poter studiare in tranquillità.
-    </p>
-    <p>
-        Questo progetto nasce per risolvere una necessità reale: avere informazioni aggiornate in tempo reale sugli spazi disponibili, evitando viaggi a vuoto e perdite di tempo. Post-it è un sistema collaborativo, dove gli stessi studenti contribuiscono ad aggiornare lo stato delle aule studio.
-    </p>
-</section>
+    <!-- Sezione Sedi -->
+    <div class="w3-container" id="sedi">
+        <h3>Le Nostre Sedi</h3>
+        <div class="w3-row-padding">
+            <div class="w3-col l3 m6">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding w3-opacity-min">Palazzo Giusso</div>
+                    <img src="Images/giusso.jpg" class="sede-img" alt="Palazzo Giusso">
+                </div>
+                <p>Largo San Giovanni Maggiore 30 - 80134, Napoli</p>
+            </div>
+            <div class="w3-col l3 m6">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding w3-opacity-min">Palazzo del Mediterraneo</div>
+                    <img src="Images/mediterraneo.jpg" class="sede-img" alt="Palazzo del Mediterraneo">
+                </div>
+                <p>Via Nuova Marina 59 - 80133, Napoli</p>
+            </div>
+            <div class="w3-col l3 m6">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding w3-opacity-min">Palazzo Santa Maria Porta Coeli</div>
+                    <img src="Images/porta_coeli.jpg" class="sede-img" alt="Palazzo Santa Maria Porta Coeli">
+                </div>
+                <p>Via Duomo 219 - 80138, Napoli</p>
+            </div>
+            <div class="w3-col l3 m6">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding w3-opacity-min">Complesso di Monteverginella</div>
+                    <img src="Images/monte_verginella.jpg" class="sede-img" alt="Complesso monumentale di Monteverginella">
+                </div>
+                <p>Vico SS. Filippo e Giacomo 21 - 80138, Napoli</p>
+            </div>
+            <div class="w3-col l3 m6">
+                <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding w3-opacity-min">Palazzo Corigliano</div>
+                    <img src="Images/corigliano.jpg" class="sede-img" alt="Palazzo Corigliano">
+                </div>
+                <p>Vico San Domenico Maggiore 12 - 80134, Napoli</p>
+            </div>
+        </div>
+    </div>
 
-<section class="section">
-    <h2>Perché "Dalla community per la community"?</h2>
-    <p>
-        La forza di Post-it sta nella sua natura partecipativa. Ogni studente può segnalare quando occupa o libera un posto: in questo modo la piattaforma rimane sempre aggiornata e utile per tutti. Nessun sistema complesso, nessuna app da scaricare: solo collaborazione genuina, velocità e utilità concreta.
-    </p>
-</section>
+    <!-- About Section -->
+    <div class="w3-container" id="about">
+        <h3>About</h3>
+        <p>
+            <b>Post-it</b> è una web app pensata per rendere più semplice la vita universitaria degli studenti dell'Orientale.
+            Ogni giorno centinaia di studenti cercano <b>aule studio, biblioteche, spazi accademici e prese disponibili</b> in cui poter studiare in tranquillità e ricaricare i propri dispositivi.
+            <br><br>
+            Questo progetto nasce per risolvere una necessità reale: avere <b>informazioni aggiornate in tempo reale</b> sugli spazi disponibili, evitando viaggi a vuoto e perdite di tempo.
+            Post-it è un sistema collaborativo, dove gli stessi studenti contribuiscono ad aggiornare lo stato delle aule studio.
+            <br><br>
+            Il progetto è basato su un modello collaborativo: sono gli stessi studenti ad aggiornare lo stato delle aule studio, il tutto attraverso un semplice click.
+            Una piattaforma sviluppata <b>dalla community per la community</b>, per migliorare l’esperienza universitaria giorno dopo giorno.
+            <br><br>
+            La forza di Post-it risiede proprio nella sua natura partecipativa. Ogni studente può segnalare quando occupa o libera un posto: in questo modo la piattaforma rimane sempre aggiornata e utile per tutti. <b>Nessun sistema complesso, nessuna app da scaricare:</b> solo collaborazione genuina, velocità e utilità concreta.
+        </p>
+    </div>
 
-<div class="cta">
-    <a href="#">Entra nella web app</a>
+    <!-- Team Section -->
+    <div class="w3-container" id="team">
+        <h3>Team</h3>
+        <div class="w3-row-padding w3-grayscale">
+            <div class="w3-col l3 m6">
+                <img src="Images/id.jpg" alt="Giorgia" width="285" height="355">
+                <h3>Giorgia Varriale</h3>
+                <p class="w3-opacity">Co-creatrice</p>
+                <p>Email: g.varriale2@studenti.unior.it</p>
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="Images/manu.png" alt="Emanuela" width="330" height="355">
+                <h3>Emanuela Cocchis</h3>
+                <p class="w3-opacity">Co-creatrice</p>
+                <p>Email: e.cocchis@studenti.unior.it</p>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+    <p>Post-it — Università L'Orientale</p>
+</footer>
+
 </body>
 </html>
